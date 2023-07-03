@@ -1,4 +1,6 @@
 import React, {useState}from "react";
+import { Link } from "react-router-dom";
+import './sttyle.css';
 
 const AddProduct = ()=>{
     const [product, setProduct] = useState({
@@ -16,6 +18,7 @@ const AddProduct = ()=>{
     }
     const handleSubmit = (e) =>{
         e.preventDefault();
+        addProduct(); //call it when the form is submitted
 
         setProduct({
             name: '',
@@ -23,8 +26,26 @@ const AddProduct = ()=>{
             discountPercentage: '',
         });
     };
+    const addProduct = async ()=>{
+        try{
+        const response = await fetch('https://dummyjson.com/products/add',{
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(product)
+        });
+        if(response.ok){
+            console.log('Product added');
+        }else{
+            console.log('Error adding product');
+        }
+    }catch (error){
+        console.log('Error adding product');
+    }
+}
     return (
-        <div>
+        <div className="add-product">
             <h1>New Product Page</h1>
             <form onSubmit={handleSubmit}>
                 <div>
@@ -39,6 +60,9 @@ const AddProduct = ()=>{
                     <label htmlFor="discountPercentage">Discount Percentage:</label>
                     <input type="text" id="discountPercentage" value={product.discountPercentage} onChange={handleInputChange}/>
                 </div>
+                   <button type="submit">Submit</button>
+                   <Link to="/">Back to Products</Link>
+                 
             </form>
         </div>
     )

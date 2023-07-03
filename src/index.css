@@ -11,29 +11,88 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-.main{
-  background-color: rgb(168, 133, 67);
-  color: black;
-}
-.navbar{
-  display: flex;
-  text-decoration: none;
-  list-style: none;
-  text-align: center;
-  background-color: rgb(6, 6, 37);
-  color: wheat;
- 
-}
-.navbar ul {
-  display: flex;
- 
-  list-style: none;
-  gap: 5rem;
-  
- 
-}
-.navbar ul li{
-  text-decoration: none;
- 
+/* styles.css */
 
+/* Styles for the main container */
+.main {
+  /* max-width: 960px; */
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgb(219, 167, 71);
 }
+
+/* Styles for the navbar */
+.navbar {
+  background-color: #f5f5f5;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.navbar nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar nav ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.navbar nav ul li a {
+  text-decoration: none;
+  color: #333;
+  padding: 5px;
+}
+
+.navbar nav ul li a:hover {
+  background-color: #ddd;
+}
+
+/* Styles for the product items */
+.pro {
+  display: inline-block;
+  width: 200px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.pro h3 {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.pro .image {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+/* Styles for the product details */
+.description {
+  text-align: center;
+}
+
+.description img {
+  max-width: 300px;
+  margin-bottom: 10px;
+}
+
+.description h1 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.description p {
+  margin-bottom: 5px;
+}
+
+.description h4 {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
