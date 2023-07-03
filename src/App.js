@@ -1,24 +1,56 @@
 import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
+import Login from './Login'
+import ProductPage from './ProductPage'
+import ProductDetails from './ProductDetails'
+import AddProduct from './AddProduct'
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    
+      /* <Login/>
+      <ProductPage/>
+      <ProductDetails/>
+      <AddProduct/> */
+      
+    <Router>
+    <div className='main'>
+      <div className='navbar'>
+      <nav>
+        <ul>
+          <li>
+            <Link to="/">Products</Link>
+          </li>
+          <li>
+            <Link to="/add-product">AddProduct</Link>
+          </li>
+          <li>
+            <Link to="/login">Login</Link>
+          </li>
+          <li>
+            <Link to="/details">Details</Link>
+          </li>
+
+        </ul>
+      </nav>
+      </div>
+      <Routes>
+        <Route path='/' element={<ProductPage/>}/>
+        <Route path='/add-product' element={<AddProduct/>}/>
+        <Route path='/login' element={<Login/>}/>
+        <Route path='/details:productId' element={<ProductDetails/>}/>
+
+      </Routes>
+      </div>
+    </Router>
+      
+
+
+      
+  
   );
 }
 

@@ -1,0 +1,20 @@
+.display{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin: 2%;
+}
+.pro{
+    border: solid 1px rgb(151, 151, 187);
+    
+    width: 30%;
+    height: 30%;
+    justify-content: space-between;
+}
+.pro h3{
+    text-align: center;
+}
+.image{
+    width: 70%;
+    height: 70%;
+}

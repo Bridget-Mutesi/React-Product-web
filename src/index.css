@@ -11,3 +11,29 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.main{
+  background-color: rgb(168, 133, 67);
+  color: black;
+}
+.navbar{
+  display: flex;
+  text-decoration: none;
+  list-style: none;
+  text-align: center;
+  background-color: rgb(6, 6, 37);
+  color: wheat;
+ 
+}
+.navbar ul {
+  display: flex;
+ 
+  list-style: none;
+  gap: 5rem;
+  
+ 
+}
+.navbar ul li{
+  text-decoration: none;
+ 
+
+}
